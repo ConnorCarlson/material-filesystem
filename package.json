@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/ConnorCarlson/material-filesystem/issues"
   },
-  "homepage": "https://github.com/ConnorCarlson/material-filesystem#readme"
+  "homepage": "https://github.com/ConnorCarlson/material-filesystem#readme",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1"
+  }
 }
