@@ -4,14 +4,14 @@
   "description": "Material Security take home assignment",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "ts-node src/index.ts",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ConnorCarlson/material-filesystem.git"
+    "url": "https://github.com/ConnorCarlson/material-filesystem.git"
   },
   "author": "Connor Carlson",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ConnorCarlson/material-filesystem/issues"
   },
