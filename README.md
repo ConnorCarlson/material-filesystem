@@ -31,3 +31,5 @@ The In Memory File System is a simple implementation of a basic file system with
 `write {path} "{content}"` - Write content to a file.
 
 `read {path}` - Get content of a file.
+
+`exit` - Exit program.
