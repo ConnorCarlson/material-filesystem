@@ -47,7 +47,7 @@ export class MemoryFile extends DirectoryNode {
 
 /**
  * This class extends DirectoryNode and represents a directory in in-memory file system.
- * It has additional properties for handling child directories, files and handling duplicate file names in the same directory.
+ * It has additional properties for handling child directories and files.
  */
 export class Directory extends DirectoryNode {
 
