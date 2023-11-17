@@ -62,12 +62,6 @@ export class Directory extends DirectoryNode {
     files: Map<String, MemoryFile>;
 
     /**
-     * Map to handle duplicate file names in the same directory.
-     * It stores the count of duplicate file names for each file in the directory.
-     */
-    duplicateFileCount: Map<String, number>;
-
-    /**
      * @param parent - Parent directory of the current directory.
      * @param name - Name of the directory.
      */
@@ -75,6 +69,5 @@ export class Directory extends DirectoryNode {
         super(parent, name);
         this.childDirectories = new Map();
         this.files = new Map();
-        this.duplicateFileCount = new Map();
     }
 }

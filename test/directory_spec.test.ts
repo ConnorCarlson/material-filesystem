@@ -122,6 +122,14 @@ describe('file system tests', () => {
             fileSystem.removeDirectoryNode(['math', 'homework', 'assignment1']);
             expect(mathHomeworkFolder.files.size).toBe(1);
         });
+
+        it('removes a duplicate file preventing further duplicate file renaming', () => {
+            fileSystem.createFile(['math', 'homework', 'assignment1']);
+            fileSystem.removeDirectoryNode(['math', 'homework', 'assignment1']);
+            fileSystem.createFile(['math', 'homework', 'assignment1']);
+            expect(mathHomeworkFolder.files.size).toBe(3);
+            expect(fileSystem.getDirectoryContents(['math', 'homework'])).toBe('assignment2 assignment1(1) assignment1');
+        });
     });
 
     describe('createNewFile', () => {

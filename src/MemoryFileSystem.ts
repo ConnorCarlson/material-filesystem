@@ -251,16 +251,13 @@ export class MemoryFileSystem {
      * @returns {string} - New name for the file.
      */
     private renameDuplicateFile(parent: Directory, name: String): String {
-        const duplicateFileCount = parent.duplicateFileCount.get(name);
-        if(duplicateFileCount) {
-            parent.duplicateFileCount.set(name, duplicateFileCount + 1)
-            return name + '(' + (duplicateFileCount + 1) + ')';
-        } else if (parent.files.has(name) || parent.childDirectories.has(name)) {
-            parent.duplicateFileCount.set(name, 1);
-            return name + '(' + 1 + ')';
+        let count = 1;
+        let newName = name;
+        while (parent.files.has(newName) || parent.childDirectories.has(newName)) {
+            newName = name + '(' + count + ')';
         }
 
-        return name;
+        return newName;
     }
 
     /**
